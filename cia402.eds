@@ -1,0 +1,168 @@
+[FileInfo]
+FileName=cia402.eds
+FileVersion=1
+FileRevision=1
+EDSVersion=4.0
+Description=Minimal CiA402 Drive
+CreationTime=12:00:00
+CreationDate=2025-01-01
+CreatedBy=Ichishi
+
+[DeviceInfo]
+VendorName=LearningDevice
+VendorNumber=1
+ProductName=CiA402Drive
+ProductNumber=1
+RevisionNumber=1
+OrderCode=402SIM
+BaudRate_0=125
+BaudRate_1=250
+BaudRate_2=500
+BaudRate_3=1000
+
+[DeviceComissioning]
+NodeID=1
+
+[MandatoryObjects]
+SupportedObjects=5
+1=0x1000
+2=0x1001
+3=0x1018
+4=0x6040
+5=0x6041
+
+[1000]
+ParameterName=Device Type
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x00040192
+
+[1001]
+ParameterName=Error Register
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0
+
+[1018]
+SubNumber=4
+ParameterName=Identity Object
+ObjectType=0x9
+
+[1018sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+
+[1018sub1]
+ParameterName=Vendor ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=1
+
+[1018sub2]
+ParameterName=Product Code
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=1
+
+[1018sub3]
+ParameterName=Revision Number
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=1
+
+[6040]
+ParameterName=Controlword
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+
+[6041]
+ParameterName=Statusword
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0
+
+[6060]
+ParameterName=Modes of Operation
+ObjectType=0x7
+DataType=0x0002
+AccessType=rw
+DefaultValue=1
+
+[6061]
+ParameterName=Modes of Operation Display
+ObjectType=0x7
+DataType=0x0002
+AccessType=ro
+DefaultValue=1
+
+[607A]
+ParameterName=Target Position
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0
+
+[6064]
+ParameterName=Position Actual Value
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0
+
+[1800]
+ParameterName=TPDO1 Communication Parameter
+ObjectType=0x9
+SubNumber=3
+
+[1800sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+
+[1800sub1]
+ParameterName=COB-ID used by TPDO
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x180+1
+
+[1800sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=1
+
+[1A00]
+ParameterName=TPDO1 Mapping
+ObjectType=0x9
+SubNumber=2
+
+[1A00sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=1
+
+[1A00sub1]
+ParameterName=Position Actual Value
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x60640020
+
+
